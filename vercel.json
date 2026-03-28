@@ -7,12 +7,12 @@
       "config": { "distDir": "dist" }
     },
     {
-      "src": "backend/main.py",
-      "use": "@vercel/python"
+      "src": "api/*.js",
+      "use": "@vercel/node"
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "backend/main.py" },
+    { "source": "/api/(.*)", "destination": "api/$1.js" },
     { "source": "/(.*)", "destination": "/frontend/$1" }
   ]
 }
