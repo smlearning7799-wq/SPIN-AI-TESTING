@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = '';
 
 function App() {
   const [theme, setTheme] = useState('light');
