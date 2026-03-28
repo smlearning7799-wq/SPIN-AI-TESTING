@@ -43,7 +43,7 @@ Format everything clearly as Markdown.
       return res.status(500).json({ detail: `Ollama failed: ${response.status} ${await response.text()}` });
     } else if (['groq', 'grok'].includes(provider.toLowerCase())) {
       let url = "https://api.groq.com/openai/v1/chat/completions";
-      let model = "llama3-8b-8192";
+      let model = "llama-3.1-8b-instant";
       if (provider.toLowerCase() === 'grok') {
         url = "https://api.x.ai/v1/chat/completions";
         model = "grok-beta";
